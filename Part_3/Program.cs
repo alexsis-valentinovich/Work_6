@@ -13,10 +13,10 @@ namespace Part_3
         {
             Console.WriteLine("Наберите предложение");
             string str = Console.ReadLine();
-            int k=0;
+            int k = 0;
             int begin = -1;
             int end = -1;
-           while ((str.Contains("{") == true) || (str.Contains("}") == true))
+            while ((str.Contains("{") == true) || (str.Contains("}") == true))
             {
                 foreach (char letter in str)
                 {
@@ -28,22 +28,22 @@ namespace Part_3
                     {
                         end = k;
                     }
-                    if ((begin!=-1) && (end!=-1))
+                    if ((begin != -1) && (end != -1))
                     {
-                        str = str.Remove(begin, end - begin+1);
-                        k-=(end-begin+1);    
+                        str = str.Remove(begin, end - begin + 1);
+                        k -= (end - begin + 1);
                         begin = -1;
                         end = -1;
-                }
+                    }
                     k++;
                 }
-                Console.WriteLine("П {0}", str);
+                Console.WriteLine("Промежуточная строка - \"{0}\"", str);
                 begin = -1;
                 end = -1;
-                k=0;
+                k = 0;
             }
             Console.WriteLine();
-            Console.WriteLine("Новая строка {0}", str);
+            Console.WriteLine("Новая строка - \"{0}\"", str);
             Console.ReadLine();
         }
     }

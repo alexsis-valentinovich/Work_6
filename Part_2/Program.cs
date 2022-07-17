@@ -19,7 +19,7 @@ namespace Part_2
             string strRev = "";
             foreach (char letter in str)
             {
-                    strRev = letter+strRev;
+                strRev = letter + strRev;
             }
             if (string.Compare(str, strRev) == 0)
             {
